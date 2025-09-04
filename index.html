@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desvendando Tu e Vous</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0A192F;
+            color: #E2E8F0;
+            line-height: 1.6;
+        }
+        .gradient-text-title {
+            background: linear-gradient(90deg, #FF3300, #FFFFCC, #00CCCC, #FF00FF);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .gradient-text-1 {
+            background: linear-gradient(90deg, #FFFFCC, #00CCCC);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .gradient-text-2 {
+            background: linear-gradient(90deg, #FF3300, #00CCCC);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .gradient-text-3 {
+            background: linear-gradient(90deg, #FF00FF, #FFFFCC);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .lesson-card {
+            background-color: #112240;
+            border-radius: 1rem;
+            padding: 2.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .btn {
+            padding: 0.75rem 1.5rem;
+            border-radius: 9999px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1-px rgba(0, 0, 0, 0.06);
+        }
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+        .btn-orange {
+            background-color: #FF3300;
+            color: white;
+        }
+        .btn-magenta {
+            background-color: #FF00FF;
+            color: white;
+        }
+        .language-fr {
+            color: #9333ea;
+        }
+        .language-pt {
+            color: #3b82f6;
+        }
+        .highlight-keyword {
+            font-weight: bold;
+            text-decoration: underline;
+            color: #FFD700;
+        }
+        .quiz-option {
+            background-color: #4A5568;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 9999px;
+            cursor: pointer;
+            transition: transform 0.2s ease, background-color 0.2s ease;
+        }
+        .quiz-option:hover {
+            transform: translateY(-2px);
+            background-color: #718096;
+        }
+        .quiz-option.correct {
+            background-color: #10B981;
+        }
+        .quiz-option.incorrect {
+            background-color: #EF4444;
+        }
+        .fill-in-the-blank {
+            background-color: #1A202C;
+            border: 2px dashed #4A5568;
+            border-radius: 0.5rem;
+            padding: 0.5rem 1rem;
+            display: inline-block;
+            min-width: 100px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body class="p-6">
+    <div class="max-w-4xl mx-auto space-y-12">
+        <header class="text-center mb-10">
+            <h1 class="text-5xl md:text-6xl font-extrabold leading-tight">
+                <span class="gradient-text-title">Tu ou Vous? Desvendando a Diferença</span>
+            </h1>
+            <p class="mt-4 text-lg text-slate-400">
+                Bem-vindo! Eu sou seu professor e estou aqui para tornar o francês fácil para você.
+            </p>
+            <p class="mt-2 text-lg text-slate-300">
+                Olá, queridos brasileiros! Vamos desvendar juntos os segredos do uso de "tu" e "vous" em francês.
+            </p>
+        </header>
+
+        <!-- SECTION 1: THE CORE DIFFERENCE -->
+        <section class="lesson-card space-y-6">
+            <h2 class="text-3xl font-bold"><span class="gradient-text-1">1. A Diferença Fundamental</span></h2>
+            <p class="text-slate-300">
+                A escolha entre **<span class="highlight-keyword">tu</span>** e **<span class="highlight-keyword">vous</span>** em francês é crucial e depende do contexto. Ambos significam "tu" ou "você" ou "vocês" em português, mas a escolha indica o grau de formalidade e o número de pessoas.
+            </p>
+            <ul class="list-disc list-inside pl-4 space-y-4 text-slate-300">
+                <li>
+                    <span class="font-bold text-lg text-[#FFFFCC]"><span class="highlight-keyword">Tu</span>:</span> É a forma **informal** e **singular**.
+                    <br><span class="text-sm italic text-slate-400">Pense em <span class="highlight-keyword">tu</span> como o nosso "você" usado com familiaridade e modo afetivo/carinhoso.</span>
+                </li>
+                <li>
+                    <span class="font-bold text-lg text-[#FFFFCC]"><span class="highlight-keyword">Vous</span>:</span> É a forma **formal** (singular) e a forma **plural** (informal e formal).
+                    <br><span class="text-sm italic text-slate-400">Pense em <span class="highlight-keyword">vous</span> como o nosso "o senhor/a senhora" ou "vocês", usado com pessoas mais velhas e estranhos.</span>
+                </li>
+            </ul>
+        </section>
+
+        <!-- SECTION 2: WHEN TO USE WHICH -->
+        <section class="lesson-card space-y-6">
+            <h2 class="text-3xl font-bold"><span class="gradient-text-2">2. Quando Usar <span class="highlight-keyword">Tu</span> ou <span class="highlight-keyword">Vous</span>?</span></h2>
+            <p class="text-slate-300">
+                A regra é simples: se você usa "você" em português de forma informal, use **<span class="highlight-keyword">tu</span>**. Se a situação pede "o senhor/a senhora" ou se você está falando com mais de uma pessoa, use **<span class="highlight-keyword">vous</span>**.
+            </p>
+            <div class="bg-[#112240] rounded-xl p-6 border border-slate-700">
+                <p class="font-bold text-lg text-teal-300 mb-2">Use <span class="highlight-keyword">Tu</span> para:</p>
+                <ul class="list-disc list-inside pl-4 space-y-2 text-slate-300">
+                    <li><span class="font-bold">Amigos e Família:</span> Com pessoas que você conhece bem.</li>
+                    <li><span class="font-bold">Crianças e Adolescentes:</span> É o tratamento padrão.</li>
+                    <li><span class="font-bold">Colegas de Trabalho:</span> Em ambientes mais informais.</li>
+                    <li><span class="font-bold">Animais de Estimação:</span> Sim, até para eles!</li>
+                </ul>
+            </div>
+            <div class="bg-[#112240] rounded-xl p-6 border border-slate-700">
+                <p class="font-bold text-lg text-rose-400 mb-2">Use <span class="highlight-keyword">Vous</span> para:</p>
+                <ul class="list-disc list-inside pl-4 space-y-2 text-slate-300">
+                    <li><span class="font-bold">Formalidade:</span> Com estranhos, idosos ou figuras de autoridade (chefes, professores, entrevista, na rua).</li>
+                    <li><span class="font-bold">Plural:</span> Para falar com duas ou mais pessoas, independentemente da formalidade.</li>
+                    <li><span class="font-bold">Respeito:</span> É uma forma de demonstrar consideração.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- SECTION 3: EXAMPLES -->
+        <section class="lesson-card space-y-6">
+            <h2 class="text-3xl font-bold"><span class="gradient-text-3">3. Exemplos em Ação</span></h2>
+            <p class="text-slate-300">
+                Veja como a conjugação do verbo muda dependendo do pronome.
+            </p>
+            <div class="bg-[#112240] rounded-xl p-6 border border-slate-700">
+                <ul class="list-disc list-inside pl-4 mt-2 space-y-4 text-slate-300">
+                    <li>
+                        <span class="font-bold text-lg text-[#FFFFCC]">Informal (Tu):</span>
+                        <br><span class="language-fr">Tu <span class="highlight-keyword">parles</span> français.</span> (Você fala francês.)
+                        <br><span class="language-fr">Tu <span class="highlight-keyword">as</span> un chien.</span> (Você tem um cachorro.)
+                        <br><span class="language-fr">Tu <span class="highlight-keyword">manges</span> du pain.</span> (Você come pão.)
+                        <br><span class="language-fr">Comment <span class="highlight-keyword">vas-tu</span>?</span> (Como vai você?)
+                    </li>
+                    <li>
+                        <span class="font-bold text-lg text-[#FFFFCC]">Formal / Plural (Vous):</span>
+                        <br><span class="language-fr">Vous <span class="highlight-keyword">parlez</span> français.</span> (O senhor/a senhora/vocês falam francês.)
+                        <br><span class="language-fr">Vous <span class="highlight-keyword">avez</span> un chien.</span> (O senhor/a senhora/vocês têm um cachorro.)
+                        <br><span class="language-fr">Vous <span class="highlight-keyword">mangez</span> du pain.</span> (O senhor/a senhora/vocês comem pão.)
+                        <br><span class="language-fr">Comment <span class="highlight-keyword">allez-vous</span>?</span> (Como vai o senhor/a senhora/vocês?)
+                    </li>
+                </ul>
+                <p class="mt-4 text-sm italic text-slate-400">**Observação:** Note que a terminação do verbo muda. Para verbos no presente do indicativo, a forma com <span class="highlight-keyword">tu</span> costuma terminar com **'-s'** e a forma com <span class="highlight-keyword">vous</span> com **'-ez'**.</p>
+            </div>
+            
+            <div class="bg-[#112240] rounded-xl p-6 border border-slate-700">
+                <p class="font-bold mb-2">Vamos praticar!</p>
+                <p class="text-slate-300">Escolha o pronome correto para se dirigir a um grupo de amigos.</p>
+                <div class="flex items-center space-x-2 mt-4">
+                    <input id="pronounInput" type="text" placeholder="tu ou vous?" class="p-3 bg-slate-800 border-2 border-slate-700 rounded-lg w-32 text-white text-center">
+                    <span class="text-lg text-white">êtes mes amis.</span>
+                </div>
+                <div id="pronounFeedback" class="mt-4 text-center"></div>
+                <button onclick="checkPronoun()" class="btn btn-orange mt-4">Checar Resposta</button>
+            </div>
+        </section>
+
+        <!-- QUIZ SECTION -->
+        <section class="lesson-card space-y-6">
+            <h2 class="text-3xl font-bold"><span class="gradient-text-3">Quiz: Teste seu Conhecimento!</span></h2>
+            <p class="text-slate-300">
+                Escolha a melhor opção de pronome para a situação. Boa sorte!
+            </p>
+            <div id="quiz-container" class="space-y-6">
+                <!-- Quiz questions and options will be dynamically rendered here -->
+            </div>
+            <div id="quiz-feedback" class="text-center font-bold text-xl mt-4"></div>
+            <div class="flex justify-center mt-6">
+                <button id="next-quiz-btn" class="btn btn-orange hidden">Próxima Pergunta</button>
+            </div>
+        </section>
+
+    </div>
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+        import { getAuth, signInAnonymously, signInWithCustomToken, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+        import { getFirestore, doc, setDoc, onSnapshot } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+
+        // Global variables provided by the Canvas environment
+        const appId = typeof __app_id !== 'undefined' ? __app_id : 'default-app-id';
+        const firebaseConfig = JSON.parse(typeof __firebase_config !== 'undefined' ? __firebase_config : '{}');
+        const initialAuthToken = typeof __initial_auth_token !== 'undefined' ? __initial_auth_token : null;
+
+        let db = null;
+        let auth = null;
+        let userId = null;
+        let isAuthReady = false;
+
+        // Initialize Firebase
+        if (firebaseConfig.apiKey) {
+            const app = initializeApp(firebaseConfig);
+            db = getFirestore(app);
+            auth = getAuth(app);
+        }
+
+        // Authentication State Listener
+        onAuthStateChanged(auth, async (user) => {
+            if (user) {
+                userId = user.uid;
+                isAuthReady = true;
+
+                // Start listening for real-time progress updates
+                const userDocRef = doc(db, `/artifacts/${appId}/users/${userId}/lessons/french-tu-vous-lesson`);
+                onSnapshot(userDocRef, (docSnap) => {
+                    if (docSnap.exists()) {
+                        const data = docSnap.data();
+                        // You can add logic here to restore progress if needed
+                    }
+                });
+
+            } else {
+                // If no user, sign in anonymously to get a user ID
+                try {
+                    if (initialAuthToken) {
+                        await signInWithCustomToken(auth, initialAuthToken);
+                    } else {
+                        await signInAnonymously(auth);
+                    }
+                } catch (error) {
+                    console.error("Error during anonymous sign-in:", error);
+                }
+            }
+        });
+
+        const saveProgress = async (lessonPart) => {
+            if (!isAuthReady) return;
+            try {
+                const userDocRef = doc(db, `/artifacts/${appId}/users/${userId}/lessons/french-tu-vous-lesson`);
+                await setDoc(userDocRef, { [lessonPart]: true }, { merge: true });
+            } catch (error) {
+                console.error("Error saving progress:", error);
+            }
+        };
+
+        window.checkPronoun = function() {
+            const pronounInput = document.getElementById('pronounInput').value.trim().toLowerCase();
+            const feedbackElement = document.getElementById('pronounFeedback');
+
+            if (pronounInput === 'vous') {
+                feedbackElement.innerHTML = `<p class="text-green-400 font-bold">Correto! Très bien! (tré bién!)</p>`;
+                saveProgress('pronounPracticeComplete');
+            } else {
+                feedbackElement.innerHTML = `<p class="text-red-400 font-bold">Incorreto. Lembre-se, para um grupo de pessoas, usamos '<span class="highlight-keyword">vous</span>'.</p>`;
+            }
+        };
+        
+        const quizzes = [
+            {
+                question: "Qual pronome você usaria para falar com seu professor?",
+                options: ["Tu", "Vous"],
+                answer: "Vous"
+            },
+            {
+                question: "Qual pronome você usaria para falar com sua irmã mais nova?",
+                options: ["Tu", "Vous"],
+                answer: "Tu"
+            },
+            {
+                question: "Você entra em um elevador com três estranhos. Qual pronome você usaria para perguntar 'Vocês estão no 5º andar?'?",
+                options: ["Tu", "Vous"],
+                answer: "Vous"
+            },
+            {
+                question: "Qual pronome você usaria para falar com o seu pai?",
+                options: ["Tu", "Vous"],
+                answer: "Tu"
+            },
+            {
+                question: "Você está em uma loja de roupas e se dirige ao vendedor. Qual pronome você usaria?",
+                options: ["Tu", "Vous"],
+                answer: "Vous"
+            },
+            {
+                question: "Você está com seu melhor amigo. Qual pronome você usaria?",
+                options: ["Tu", "Vous"],
+                answer: "Tu"
+            },
+            {
+                question: "Qual pronome você usaria para falar com o seu chefe?",
+                options: ["Tu", "Vous"],
+                answer: "Vous"
+            },
+            {
+                question: "Você está com sua mãe e seu pai. Qual pronome você usaria para se dirigir a ambos?",
+                options: ["Tu", "Vous"],
+                answer: "Vous"
+            }
+        ];
+
+        let currentQuizIndex = 0;
+        const quizContainer = document.getElementById('quiz-container');
+        const nextQuizBtn = document.getElementById('next-quiz-btn');
+        const quizFeedback = document.getElementById('quiz-feedback');
+
+        function renderQuiz() {
+            if (currentQuizIndex >= quizzes.length) {
+                quizContainer.innerHTML = '<p class="text-green-400 text-2xl font-bold text-center">Parabéns! Você completou o quiz!</p>';
+                nextQuizBtn.classList.add('hidden');
+                return;
+            }
+
+            const currentQuiz = quizzes[currentQuizIndex];
+            quizContainer.innerHTML = `
+                <p class="text-xl font-bold mb-4">${currentQuiz.question}</p>
+                <div class="flex flex-col space-y-4">
+                    ${currentQuiz.options.map(option => `
+                        <button class="quiz-option" data-answer="${option}">${option}</button>
+                    `).join('')}
+                </div>
+            `;
+            quizFeedback.textContent = '';
+            nextQuizBtn.classList.add('hidden');
+
+            document.querySelectorAll('.quiz-option').forEach(button => {
+                button.addEventListener('click', handleQuizClick);
+            });
+        }
+
+        function handleQuizClick(event) {
+            const selectedOption = event.target;
+            const selectedAnswer = selectedOption.dataset.answer;
+            const correctAnswer = quizzes[currentQuizIndex].answer;
+
+            document.querySelectorAll('.quiz-option').forEach(button => {
+                button.classList.remove('incorrect');
+                button.classList.remove('correct');
+                button.disabled = true;
+                if (button.dataset.answer === correctAnswer) {
+                    button.classList.add('correct');
+                }
+            });
+
+            if (selectedAnswer === correctAnswer) {
+                quizFeedback.innerHTML = `<p class="text-green-400">Correto! Très bien! (tré bién!)</p>`;
+            } else {
+                selectedOption.classList.add('incorrect');
+                quizFeedback.innerHTML = `<p class="text-red-400">Incorreto. A resposta correta está destacada em verde.</p>`;
+            }
+            nextQuizBtn.classList.remove('hidden');
+        }
+
+        nextQuizBtn.addEventListener('click', () => {
+            currentQuizIndex++;
+            renderQuiz();
+        });
+
+        window.onload = () => {
+            renderQuiz();
+        };
+    </script>
+</body>
+</html>
